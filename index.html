@@ -59,7 +59,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/JavaScript/">JavaScript</a></li>
 	        
 			</ul>
 		</nav>
@@ -139,7 +139,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/JavaScript/">JavaScript</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,6 +155,97 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-JavaScript设计模式与开发实践学习笔记01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/04/JavaScript设计模式与开发实践学习笔记01/">JavaScript设计模式与开发实践学习笔记01</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/04/JavaScript设计模式与开发实践学习笔记01/" class="archive-article-date">
+  	<time datetime="2017-03-04T15:47:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br/></p>
+<h3 id="第一章-面向对象的JavaScript"><a href="#第一章-面向对象的JavaScript" class="headerlink" title="第一章  面向对象的JavaScript"></a>第一章  面向对象的JavaScript</h3><ol>
+<li>JavaScript是一门典型的动态类型语言，简单的理解动态类型编程语言就是变量的数据类型是不确定的，只有当程序运行到当前变量时才确定变量的类型。比如 var a = 123; 此时123既可能是string类型，也可能是number类型，只有在运行到a变量时才根据程序环境进行判断。<br><br></li>
+<li>多态：同一操作作用于不同的对象上面，可以产生不同的解释和不同的执行结果。多态背后的思想是<strong>将“做什么”和“谁去做以及怎样去做”分离开来</strong>，也就是将“不变的事物”与 “可能改变的事物”分离开来。<br>一段简单的多态代码<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"> animal </span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span> ( animal <span class="keyword">instanceof</span> Duck )&#123;</div><div class="line">		<span class="built_in">console</span>.log( <span class="string">'嘎嘎嘎'</span> );</div><div class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span> ( animal <span class="keyword">instanceof</span> Chicken )&#123;</div><div class="line">		<span class="built_in">console</span>.log( <span class="string">'咯咯咯'</span> );</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> Duck = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"><span class="keyword">var</span> Chicken = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">makeSound( <span class="keyword">new</span> Duck() ); <span class="comment">// 嘎嘎嘎</span></div><div class="line">makeSound( <span class="keyword">new</span> Chicken() ); <span class="comment">// 咯咯咯</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上面这段代码实现了一个简单的多态，同一个函数传入不同的参数后输入不同的结果，但这段代码的问题在于如果要新加入一个不同的参数的话，函数maskSound就要扩充，当参数的种类越来越多时，maskSound函数也就变得越来越复杂。如：现在要加入一个dog参数，则makdSound函数就要再时行判断了。<br>改进代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"> animal </span>)</span>&#123;</div><div class="line">	animal.sound();</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> Duck = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Duck.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log( <span class="string">'嘎嘎嘎'</span> );</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> Chicken = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Chicken.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log( <span class="string">'咯咯咯'</span> );</div><div class="line">&#125;;</div><div class="line">makeSound( <span class="keyword">new</span> Duck() ); <span class="comment">// 嘎嘎嘎</span></div><div class="line">makeSound( <span class="keyword">new</span> Chicken() ); <span class="comment">// 咯咯咯</span></div></pre></td></tr></table></figure></p>
+<p>如果此时要加入一个Dog则只需加入如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Dog = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Dog.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log( <span class="string">'汪汪汪'</span> );</div><div class="line">&#125;;</div><div class="line">makeSound( <span class="keyword">new</span> Dog() ); <span class="comment">// 汪汪汪</span></div></pre></td></tr></table></figure></p>
+<p>通过上面的两段代码就充分体现了多态背后的思想：<strong>将“做什么”和“谁去做以及怎样去做”分离开</strong>。<br>
+        
+          <a class="article-more-a" href="/2017/03/04/JavaScript设计模式与开发实践学习笔记01/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">原型模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript/" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/04/JavaScript设计模式与开发实践学习笔记01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -320,6 +411,18 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">原型模式</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
