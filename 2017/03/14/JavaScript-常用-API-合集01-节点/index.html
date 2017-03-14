@@ -6,17 +6,98 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.hawuji.com">
-  <title>Archives: 2017/1 | hawuji&#39;s blog</title>
+  <title>（转载）JavaScript 常用 API 合集01-节点 | hawuji&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一名前端工程师。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hawuji's blog">
-<meta property="og:url" content="http://blog.hawuji.com/archives/2017/01/index.html">
+  <meta name="description" content="一、节点1.1 节点属性
+
+
+API
+功能说明
+
+
+
+
+Node.nodeName
+//返回节点名称，只读
+
+
+Node.nodeType
+//返回节点类型的常数值，只读
+
+
+Node.nodeValue
+//返回 Text 或 Comment 节点的文本值，只读
+
+
+Node.textContent
+//返回当前节点和它的所有后代节点的文本内容，可读写
+
+
+Node.baseURI
+//返回当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（转载）JavaScript 常用 API 合集01-节点">
+<meta property="og:url" content="http://blog.hawuji.com/2017/03/14/JavaScript-常用-API-合集01-节点/index.html">
 <meta property="og:site_name" content="hawuji's blog">
-<meta property="og:description" content="一名前端工程师。">
+<meta property="og:description" content="一、节点1.1 节点属性
+
+
+API
+功能说明
+
+
+
+
+Node.nodeName
+//返回节点名称，只读
+
+
+Node.nodeType
+//返回节点类型的常数值，只读
+
+
+Node.nodeValue
+//返回 Text 或 Comment 节点的文本值，只读
+
+
+Node.textContent
+//返回当前节点和它的所有后代节点的文本内容，可读写
+
+
+Node.baseURI
+//返回当">
+<meta property="og:image" content="http://blog.hawuji.com/assets/blogImg/201703142240.jpg">
+<meta property="og:updated_time" content="2017-03-14T15:00:34.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hawuji's blog">
-<meta name="twitter:description" content="一名前端工程师。">
+<meta name="twitter:title" content="（转载）JavaScript 常用 API 合集01-节点">
+<meta name="twitter:description" content="一、节点1.1 节点属性
+
+
+API
+功能说明
+
+
+
+
+Node.nodeName
+//返回节点名称，只读
+
+
+Node.nodeType
+//返回节点类型的常数值，只读
+
+
+Node.nodeValue
+//返回 Text 或 Comment 节点的文本值，只读
+
+
+Node.textContent
+//返回当前节点和它的所有后代节点的文本内容，可读写
+
+
+Node.baseURI
+//返回当">
+<meta name="twitter:image" content="http://blog.hawuji.com/assets/blogImg/201703142240.jpg">
   
     <link rel="alternative" href="/atom.xml" title="hawuji&#39;s blog" type="application/atom+xml">
   
@@ -154,71 +235,847 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript-常用-API-合集01-节点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/10/hello-world/" class="archive-article-date">
-  	<time datetime="2017-01-10T13:01:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/10/hello-world/">Hexo入门介绍</a>
+    <h1 class="article-title" itemprop="name">
+      （转载）JavaScript 常用 API 合集01-节点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/14/JavaScript-常用-API-合集01-节点/" class="archive-article-date">
+  	<time datetime="2017-03-14T14:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h2 id="一、节点"><a href="#一、节点" class="headerlink" title="一、节点"></a>一、节点</h2><h3 id="1-1-节点属性"><a href="#1-1-节点属性" class="headerlink" title="1.1 节点属性"></a>1.1 节点属性</h3><table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.nodeName</td>
+<td>//返回节点名称，只读</td>
+</tr>
+<tr>
+<td>Node.nodeType</td>
+<td>//返回节点类型的常数值，只读</td>
+</tr>
+<tr>
+<td>Node.nodeValue</td>
+<td>//返回 Text 或 Comment 节点的文本值，只读</td>
+</tr>
+<tr>
+<td>Node.textContent</td>
+<td>//返回当前节点和它的所有后代节点的文本内容，可读写</td>
+</tr>
+<tr>
+<td>Node.baseURI</td>
+<td>//返回当前网页的绝对路径</td>
+</tr>
+<tr>
+<td>Node.ownerDocument</td>
+<td>//返回当前节点所在的顶层文档对象，即 document</td>
+</tr>
+<tr>
+<td>Node.nextSibling</td>
+<td>//返回紧跟在当前节点后面的第一个兄弟节点</td>
+</tr>
+<tr>
+<td>Node.previousSibling</td>
+<td>//返回当前节点前面的、距离最近的一个兄弟节点</td>
+</tr>
+<tr>
+<td>Node.parentNode</td>
+<td>//返回当前节点的父节点</td>
+</tr>
+<tr>
+<td>Node.parentElement</td>
+<td>//返回当前节点的父 Element 节点</td>
+</tr>
+<tr>
+<td>Node.childNodes</td>
+<td>//返回当前节点的所有子节点</td>
+</tr>
+<tr>
+<td>Node.firstChild</td>
+<td>//返回当前节点的第一个子节点</td>
+</tr>
+<tr>
+<td>Node.lastChild</td>
+<td>//返回当前节点的最后一个子节点</td>
+</tr>
+<tr>
+<td>//parentNode 接口</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Node.children</td>
+<td>//返回指定节点的所有 Element 子节点</td>
+</tr>
+<tr>
+<td>Node.firstElementChild</td>
+<td>//返回当前节点的第一个 Element 子节点</td>
+</tr>
+<tr>
+<td>Node.lastElementChild</td>
+<td>//返回当前节点的最后一个 Element 子节点</td>
+</tr>
+<tr>
+<td>Node.childElementCount</td>
+<td>//返回当前节点所有 Element 子节点的数目。</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h3 id="1-2-操作"><a href="#1-2-操作" class="headerlink" title="1.2 操作"></a>1.2 操作</h3><table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.appendChild(node)</td>
+<td>//向节点添加最后一个子节点</td>
+</tr>
+<tr>
+<td>Node.hasChildNodes()</td>
+<td>//返回布尔值，表示当前节点是否有子节点</td>
+</tr>
+<tr>
+<td>Node.cloneNode(true);</td>
+<td>// 默认为 false(克隆节点), true(克隆节点及其属性，以及后代)</td>
+</tr>
+<tr>
+<td>Node.insertBefore(newNode,oldNode)</td>
+<td>// 在指定子节点之前插入新的子节点</td>
+</tr>
+<tr>
+<td>Node.removeChild(node)</td>
+<td>//删除节点，在要删除节点的父节点上操作</td>
+</tr>
+<tr>
+<td>Node.replaceChild(newChild,oldChild)</td>
+<td>//替换节点</td>
+</tr>
+<tr>
+<td>Node.contains(node)</td>
+<td>//返回一个布尔值，表示参数节点是否为当前节点的后代节点。</td>
+</tr>
+<tr>
+<td>Node.compareDocumentPosition(node)</td>
+<td>//返回一个 7 个比特位的二进制值，表示参数节点和当前节点的关系</td>
+</tr>
+<tr>
+<td>Node.isEqualNode(noe)</td>
+<td>//返回布尔值，用于检查两个节点是否相等。所谓相等的节点，指的是两个节点的类型相同、属性相同、子节点相同。</td>
+</tr>
+<tr>
+<td>Node.normalize()</td>
+<td>//用于清理当前节点内部的所有 Text 节点。它会去除空的文本节点，并且将毗邻的文本节点合并成一个。</td>
+</tr>
+<tr>
+<td>//ChildNode 接口</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Node.remove()</td>
+<td>//用于删除当前节点</td>
+</tr>
+<tr>
+<td>Node.before()</td>
+<td>//</td>
+</tr>
+<tr>
+<td>Node.after()</td>
+<td>//</td>
+</tr>
+<tr>
+<td>Node.replaceWith()</td>
+<td>//</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-3-Document-节点"><a href="#1-3-Document-节点" class="headerlink" title="1.3 Document 节点"></a>1.3 Document 节点</h3><h4 id="1-3-1-Document-节点的属性"><a href="#1-3-1-Document-节点的属性" class="headerlink" title="1.3.1 Document 节点的属性"></a>1.3.1 Document 节点的属性</h4><table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.doctype</td>
+<td>//</td>
+</tr>
+<tr>
+<td>document.documentElement</td>
+<td>//返回当前文档的根节点</td>
+</tr>
+<tr>
+<td>document.defaultView</td>
+<td>//返回 document 对象所在的 window 对象</td>
+</tr>
+<tr>
+<td>document.body</td>
+<td>//返回当前文档的<body>节点</body></td>
+</tr>
+<tr>
+<td>document.head</td>
+<td>//返回当前文档的<head>节点</head></td>
+</tr>
+<tr>
+<td>document.activeElement</td>
+<td>//返回当前文档中获得焦点的那个元素。</td>
+</tr>
+<tr>
+<td>//节点集合属性</td>
+<td>–</td>
+</tr>
+<tr>
+<td>document.links</td>
+<td>//返回当前文档的所有 a 元素</td>
+</tr>
+<tr>
+<td>document.forms</td>
+<td>//返回页面中所有表单元素</td>
+</tr>
+<tr>
+<td>document.images</td>
+<td>//返回页面中所有图片元素</td>
+</tr>
+<tr>
+<td>document.embeds</td>
+<td>//返回网页中所有嵌入对象</td>
+</tr>
+<tr>
+<td>document.scripts</td>
+<td>//返回当前文档的所有脚本</td>
+</tr>
+<tr>
+<td>document.styleSheets</td>
+<td>//返回当前网页的所有样式表</td>
+</tr>
+<tr>
+<td>//文档信息属性</td>
+<td>–</td>
+</tr>
+<tr>
+<td>document.documentURI</td>
+<td>//表示当前文档的网址</td>
+</tr>
+<tr>
+<td>document.URL</td>
+<td>//返回当前文档的网址</td>
+</tr>
+<tr>
+<td>document.domain</td>
+<td>//返回当前文档的域名</td>
+</tr>
+<tr>
+<td>document.lastModified</td>
+<td>//返回当前文档最后修改的时间戳</td>
+</tr>
+<tr>
+<td>document.location</td>
+<td>//返回 location 对象，提供当前文档的 URL 信息</td>
+</tr>
+<tr>
+<td>document.referrer</td>
+<td>//返回当前文档的访问来源</td>
+</tr>
+<tr>
+<td>document.title</td>
+<td>//返回当前文档的标题</td>
+</tr>
+<tr>
+<td>document.characterSet</td>
+<td>// 属性返回渲染当前文档的字符集，比如 UTF-8、ISO-8859-1。</td>
+</tr>
+<tr>
+<td>document.readyState</td>
+<td>//返回当前文档的状态</td>
+</tr>
+<tr>
+<td>document.designMode</td>
+<td>//控制当前文档是否可编辑，可读写</td>
+</tr>
+<tr>
+<td>document.compatMode</td>
+<td>//返回浏览器处理文档的模式</td>
+</tr>
+<tr>
+<td>document.cookie</td>
+<td>//用来操作 Cookie</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-3-2-Document-节点的方法"><a href="#1-3-2-Document-节点的方法" class="headerlink" title="1.3.2 Document 节点的方法"></a>1.3.2 Document 节点的方法</h4><p>（1）读写方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.open()</td>
+<td>//用于新建并打开一个文档</td>
+</tr>
+<tr>
+<td>document.close()</td>
+<td>//不安比 open 方法所新建的文档</td>
+</tr>
+<tr>
+<td>document.write()</td>
+<td>//用于向当前文档写入内容</td>
+</tr>
+<tr>
+<td>document.writeIn()</td>
+<td>//用于向当前文档写入内容，尾部添加换行符。</td>
+</tr>
+</tbody>
+</table>
+<p>（2）查找节点</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.querySelector(selectors)</td>
+<td>//接受一个 CSS 选择器作为参数，返回第一个匹配该选择器的元素节点。</td>
+</tr>
+<tr>
+<td>document.querySelectorAll(selectors)</td>
+<td>//接受一个 CSS 选择器作为参数，返回所有匹配该选择器的元素节点。</td>
+</tr>
+<tr>
+<td>document.getElementsByTagName(tagName)</td>
+<td>//返回所有指定 HTML 标签的元素</td>
+</tr>
+<tr>
+<td>document.getElementsByClassName(className)</td>
+<td>//返回包括了所有 class 名字符合指定条件的元素</td>
+</tr>
+<tr>
+<td>document.getElementsByName(name)</td>
+<td>//用于选择拥有 name 属性的 HTML 元素（ 比如&lt;form>、&lt;radio>、&lt;img>、&lt;frame>、&lt;embed>和&lt;object>等）</td>
+</tr>
+<tr>
+<td>document.getElementById(id)</td>
+<td>//返回匹配指定 id 属性的元素节点。</td>
+</tr>
+<tr>
+<td>document.elementFromPoint(x,y)</td>
+<td>//返回位于页面指定位置最上层的Element 子节点。</td>
+</tr>
+</tbody>
+</table>
+<p>（3）生成节点</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.createElement(tagName)</td>
+<td>//用来生成 HTML 元素节点。</td>
+</tr>
+<tr>
+<td>document.createTextNode(text)</td>
+<td>//用来生成文本节点</td>
+</tr>
+<tr>
+<td>document.createAttribute(name)</td>
+<td>//生成一个新的属性对象节点，并返回它。</td>
+</tr>
+<tr>
+<td>document.createDocumentFragment()</td>
+<td>//生成一个 DocumentFragment 对象</td>
+</tr>
+</tbody>
+</table>
+<p>（4）事件方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.createEvent(type)</td>
+<td>//生成一个事件对象，该对象能被element.dispatchEvent()方法使用</td>
+</tr>
+<tr>
+<td>document.addEventListener(type,listener,capture)</td>
+<td>//注册事件</td>
+</tr>
+<tr>
+<td>document.removeEventListener(type,listener,capture)</td>
+<td>//注销事件</td>
+</tr>
+<tr>
+<td>document.dispatchEvent(event)</td>
+<td>//触发事件</td>
+</tr>
+</tbody>
+</table>
+<p>（5）其他</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.hasFocus()</td>
+<td>//返回一个布尔值，表示当前文档之中是否有元素被激活或获得焦点。</td>
+</tr>
+<tr>
+<td>document.adoptNode(externalNode)</td>
+<td>//将某个节点，从其原来所在的文档移除，插入当前文档，并返回插入后的新节点。</td>
+</tr>
+<tr>
+<td>document.importNode(externalNode, deep)</td>
+<td>//从外部文档拷贝指定节点，插入当前文档。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-4-Element-节点"><a href="#1-4-Element-节点" class="headerlink" title="1.4 Element 节点"></a>1.4 Element 节点</h3><h4 id="1-4-1-Element-节点的属性"><a href="#1-4-1-Element-节点的属性" class="headerlink" title="1.4.1 Element 节点的属性"></a>1.4.1 Element 节点的属性</h4><p>（1）特性属性</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.attributes</td>
+<td>//返回当前元素节点的所有属性节点</td>
+</tr>
+<tr>
+<td>Element.id</td>
+<td>//返回指定元素的 id 属性，可读写</td>
+</tr>
+<tr>
+<td>Element.tagName</td>
+<td>//返回指定元素的大写标签名</td>
+</tr>
+<tr>
+<td>Element.innerHTML</td>
+<td>//返回该元素包含的 HTML 代码，可读写</td>
+</tr>
+<tr>
+<td>Element.outerHTML</td>
+<td>//返回指定元素节点的所有 HTML 代码，包括它自身和包含的的所有子元素，可读写</td>
+</tr>
+<tr>
+<td>Element.className</td>
+<td>//返回当前元素的 class 属性，可读写</td>
+</tr>
+<tr>
+<td>Element.classList</td>
+<td>//返回当前元素节点的所有 class 集合</td>
+</tr>
+<tr>
+<td>Element.dataset</td>
+<td>//返回元素节点中所有的 data-*属性。</td>
+</tr>
+</tbody>
+</table>
+<p>（2）尺寸属性</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.clientHeight</td>
+<td>//返回元素节点可见部分的高度</td>
+</tr>
+<tr>
+<td>Element.clientWidth</td>
+<td>//返回元素节点可见部分的宽度</td>
+</tr>
+<tr>
+<td>Element.clientLeft</td>
+<td>//返回元素节点左边框的宽度</td>
+</tr>
+<tr>
+<td>Element.clientTop</td>
+<td>//返回元素节点顶部边框的宽度</td>
+</tr>
+<tr>
+<td>Element.scrollHeight</td>
+<td>//返回元素节点的总高度</td>
+</tr>
+<tr>
+<td>Element.scrollWidth</td>
+<td>//返回元素节点的总宽度</td>
+</tr>
+<tr>
+<td>Element.scrollLeft</td>
+<td>//返回元素节点的水平滚动条向右滚动的像素数值,通过设置这个属性可以改变元素的滚动位置</td>
+</tr>
+<tr>
+<td>Element.scrollTop</td>
+<td>//返回元素节点的垂直滚动向下滚动的像素数值</td>
+</tr>
+<tr>
+<td>Element.offsetHeight</td>
+<td>//返回元素的垂直高度(包含 border,padding)</td>
+</tr>
+<tr>
+<td>Element.offsetWidth</td>
+<td>//返回元素的水平宽度(包含 border,padding)</td>
+</tr>
+<tr>
+<td>Element.offsetLeft</td>
+<td>//返回当前元素左上角相对于 Element.offsetParent节点的垂直偏移</td>
+</tr>
+<tr>
+<td>Element.offsetTop</td>
+<td>//返回水平位移</td>
+</tr>
+<tr>
+<td>Element.style</td>
+<td>//返回元素节点的行内样式</td>
+</tr>
+</tbody>
+</table>
+<p>（3）节点相关属性</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.children</td>
+<td>//包括当前元素节点的所有子元素</td>
+</tr>
+<tr>
+<td>Element.childElementCount</td>
+<td>//返回当前元素节点包含的子 HTML 元素节点的个数</td>
+</tr>
+<tr>
+<td>Element.firstElementChild</td>
+<td>//返回当前节点的第一个 Element 子节点</td>
+</tr>
+<tr>
+<td>Element.lastElementChild</td>
+<td>//返回当前节点的最后一个 Element 子节点</td>
+</tr>
+<tr>
+<td>Element.nextElementSibling</td>
+<td>//返回当前元素节点的下一个兄弟 HTML 元素节点</td>
+</tr>
+<tr>
+<td>Element.previousElementSibling</td>
+<td>//返回当前元素节点的前一个兄弟 HTML 节点</td>
+</tr>
+<tr>
+<td>Element.offsetParent</td>
+<td>//返回当前元素节点的最靠近的、并且 CSS 的position 属性不等于 static 的父元素。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-4-2-Element-节点的方法"><a href="#1-4-2-Element-节点的方法" class="headerlink" title="1.4.2 Element 节点的方法"></a>1.4.2 Element 节点的方法</h4><p>（1）位置方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getBoundingClientRect()</td>
+<td>// getBoundingClientRect 返回一个对象，包含top,left,right,bottom,width,height</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().top</td>
+<td>// top 元素上外边界距窗口最上面的距离</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().right</td>
+<td>// right 元素右外边界距窗口最上面的距离</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().bottom</td>
+<td>// bottom 元素下外边界距窗口最上面的距离</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().left</td>
+<td>// left 元素左外边界距窗口最上面的距离</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().width</td>
+<td>// width 元素自身宽(包含 border,padding)</td>
+</tr>
+<tr>
+<td>getBoundingClientRect().height</td>
+<td>// height 元素自身高(包含 border,padding)</td>
+</tr>
+<tr>
+<td>getClientRects()</td>
+<td>//返回当前元素在页面上形参的所有矩形。</td>
+</tr>
+</tbody>
+</table>
+<p>元素在页面上的偏移量<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> rect = el.getBoundingClientRect()</div><div class="line"><span class="keyword">return</span> &#123;</div><div class="line"> <span class="attr">top</span>: rect.top + <span class="built_in">document</span>.body.scrollTop,</div><div class="line"> <span class="attr">left</span>: rect.left + <span class="built_in">document</span>.body.scrollLeft</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>（2）属性方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.getAttribute()</td>
+<td>//读取指定属性</td>
+</tr>
+<tr>
+<td>Element.setAttribute()</td>
+<td>//设置指定属性</td>
+</tr>
+<tr>
+<td>Element.hasAttribute()</td>
+<td>//返回一个布尔值，表示当前元素节点是否有指定的属性</td>
+</tr>
+<tr>
+<td>Element.removeAttribute()</td>
+<td>//移除指定属性</td>
+</tr>
+</tbody>
+</table>
+<p>（3）查找方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.querySelector()</td>
+<td>//返回匹配指定选择器的第一个元素</td>
+</tr>
+<tr>
+<td>Element.querySelectorAll()</td>
+<td>//返回所有满足条件的元素，结果是个nodeList集合</td>
+</tr>
+<tr>
+<td>Element.getElementsByTagName()</td>
+<td>//返回带有指定标签名的对象的集合</td>
+</tr>
+<tr>
+<td>Element.getElementsByClassName()</td>
+<td>//返回文档中所有指定类名的元素集合，作为 NodeList 对象。</td>
+</tr>
+</tbody>
+</table>
+<p>（4）事件方法</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element.addEventListener()</td>
+<td>//添加事件的回调函数</td>
+</tr>
+<tr>
+<td>Element.removeEventListener()</td>
+<td>//移除事件监听函数</td>
+</tr>
+<tr>
+<td>Element.dispatchEvent()</td>
+<td>//触发事件</td>
+</tr>
+</tbody>
+</table>
+<p>//ie8<br>Element.attachEvent(oneventName,listener)<br>Element.detachEvent(oneventName,listener)</p>
+<p>// event 对象<br>var event = window.event||event;</p>
+<p>// 事件的目标节点<br>var target = event.target || event.srcElement;</p>
+<p>// 事件代理<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ul.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line"> <span class="keyword">if</span> (event.target.tagName.toLowerCase() === <span class="string">'li'</span>) &#123;</div><div class="line"> <span class="built_in">console</span>.log(event.target.innerHTML)</div><div class="line"> &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>（5）其他<br>Element.scrollIntoView() //滚动当前元素，进入浏览器的可见区域<br>解析 HTML 字符串，然后将生成的节点插入 DOM 树的指定位置。<br>Element.insertAdjacentHTML(where, htmlString);<br>Element.insertAdjacentHTML(‘beforeBegin’, htmlString); // 在该元素前插入<br>Element.insertAdjacentHTML(‘afterBegin’, htmlString); // 在该元素第一个子元素前插入<br>Element.insertAdjacentHTML(‘beforeEnd’, htmlString); // 在该元素最后一个子元素后面插入<br>Element.insertAdjacentHTML(‘afterEnd’, htmlString); // 在该元素后插入<br>Element.remove() //用于将当前元素节点从 DOM 中移除<br>Element.focus() //用于将当前页面的焦点，转移到指定元素上</p>
+<p>本文转载自 <strong>web前端开发</strong> 公众号,大家可以关注此公众号回复关键字“jsapi”进行获取此电子版文档。<br><img src="/assets/blogImg/201703142240.jpg" alt="web前端开发"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转载</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">API</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Github/" class="article-tag-list-link color2">Github</a>
+        			<a href="/categories/JavaScript/" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.hawuji.com/2017/03/14/JavaScript-常用-API-合集01-节点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/03/07/JavaScript设计模式与开发实践学习笔记02/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript设计模式与开发实践学习笔记02</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript-常用-API-合集01-节点" data-title="（转载）JavaScript 常用 API 合集01-节点" data-url="http://blog.hawuji.com/2017/03/14/JavaScript-常用-API-合集01-节点/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hawuji"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -241,8 +1098,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
