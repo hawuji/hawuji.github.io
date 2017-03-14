@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.hawuji.com">
-  <title>Tag: 转载 | hawuji&#39;s blog</title>
+  <title>（转载）JavaScript常用API合集02-CSS操作 | hawuji&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一名前端工程师。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hawuji's blog">
-<meta property="og:url" content="http://blog.hawuji.com/tags/转载/index.html">
+  <meta name="description" content="二、CSS 操作1.类名操作IE8 以下Element.className //获取元素节点的类名Element.className += ‘ ‘ + newClassName //新增一个类名
+判断是否有某个类名123function hasClass(element,className)&amp;#123; return new RegExp(className,&apos;gi&apos;).test(element">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（转载）JavaScript常用API合集02-CSS操作">
+<meta property="og:url" content="http://blog.hawuji.com/2017/03/14/JavaScript常用API合集02-CSS操作/index.html">
 <meta property="og:site_name" content="hawuji's blog">
-<meta property="og:description" content="一名前端工程师。">
+<meta property="og:description" content="二、CSS 操作1.类名操作IE8 以下Element.className //获取元素节点的类名Element.className += ‘ ‘ + newClassName //新增一个类名
+判断是否有某个类名123function hasClass(element,className)&amp;#123; return new RegExp(className,&apos;gi&apos;).test(element">
+<meta property="og:updated_time" content="2017-03-14T15:51:59.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hawuji's blog">
-<meta name="twitter:description" content="一名前端工程师。">
+<meta name="twitter:title" content="（转载）JavaScript常用API合集02-CSS操作">
+<meta name="twitter:description" content="二、CSS 操作1.类名操作IE8 以下Element.className //获取元素节点的类名Element.className += ‘ ‘ + newClassName //新增一个类名
+判断是否有某个类名123function hasClass(element,className)&amp;#123; return new RegExp(className,&apos;gi&apos;).test(element">
   
     <link rel="alternative" href="/atom.xml" title="hawuji&#39;s blog" type="application/atom+xml">
   
@@ -154,36 +158,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JavaScript常用API合集02-CSS操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      （转载）JavaScript常用API合集02-CSS操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/JavaScript常用API合集02-CSS操作/" class="archive-article-date">
+
+        
+        <a href="/2017/03/14/JavaScript常用API合集02-CSS操作/" class="archive-article-date">
   	<time datetime="2017-03-14T15:41:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/JavaScript常用API合集02-CSS操作/">（转载）JavaScript常用API合集02-CSS操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h2 id="二、CSS-操作"><a href="#二、CSS-操作" class="headerlink" title="二、CSS 操作"></a>二、CSS 操作</h2><h3 id="1-类名操作"><a href="#1-类名操作" class="headerlink" title="1.类名操作"></a>1.类名操作</h3><p>IE8 以下<br>Element.className //获取元素节点的类名<br>Element.className += ‘ ‘ + newClassName //新增一个类名</p>
+<p>判断是否有某个类名<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasClass</span>(<span class="params">element,className</span>)</span>&#123;</div><div class="line"> <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(className,<span class="string">'gi'</span>).test(element.className);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>移除 class<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeClass</span>(<span class="params">element,className</span>)</span>&#123;</div><div class="line"> element.className = element.className.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'(^|\\b)'</span></div><div class="line">+ className.split(<span class="string">' '</span>).join(<span class="string">'|'</span>) + <span class="string">'(\\b|$)'</span>, <span class="string">'gi'</span>),<span class="string">''</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>IE10</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.classList.add(className)</td>
+<td>//新增</td>
+</tr>
+<tr>
+<td>element.classList.remove(className)</td>
+<td>//删除</td>
+</tr>
+<tr>
+<td>element.classList.contains(className)</td>
+<td>//是否包含</td>
+</tr>
+<tr>
+<td>element.classList.toggle(className)</td>
+<td>//toggle class</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-style-操作"><a href="#2-style-操作" class="headerlink" title="2.style 操作"></a>2.style 操作</h3><p>element.setAttribute(‘style’,’’)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="built_in">document</span>.getElementById(<span class="string">"d1"</span>);</div><div class="line"></div><div class="line">d.setAttribute(<span class="string">"align"</span>, <span class="string">"center"</span>);</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.style.backgroundColor = ‘red’</td>
+<td>//设置背景</td>
+</tr>
+<tr>
+<td>element.style.cssText</td>
+<td>//用来读写或删除整个 style 属性</td>
+</tr>
+<tr>
+<td>element.style.setProperty(propertyName,value)</td>
+<td>//设置 css 属性</td>
+</tr>
+<tr>
+<td>element.style.getPropertyValue(property)</td>
+<td>//获取 css 属性</td>
+</tr>
+<tr>
+<td>element.style.removeProperty(property)</td>
+<td>//删除 css 属性</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>上文中的setProperty，getPropertyValue指的是：背景、边框和边距、布局、列表、杂项、定位、打印、滚动条、表格、文本、规范 具体可查看：<a href="http://www.w3school.com.cn/jsref/dom_obj_style.asp" target="_blank" rel="external">http://www.w3school.com.cn/jsref/dom_obj_style.asp</a></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">elt.style.cssText = <span class="string">"color: blue"</span>; <span class="comment">// 设置多个样式属性</span></div><div class="line">elt.setAttribute(<span class="string">"style"</span>, <span class="string">"color: blue"</span>); <span class="comment">// 设置多个样式属性</span></div><div class="line">elt.style.color = <span class="string">"blue"</span>; <span class="comment">// 直接设置样式属性</span></div><div class="line"><span class="keyword">var</span> st = elt.style; st.color = <span class="string">"blue"</span>; <span class="comment">// 间接设置样式属性</span></div></pre></td></tr></table></figure>
+<p>操作非内联样式<br>IE8<br>element.currentStyle[attrName]</p>
+<blockquote>
+<p>currentStyle是IE浏览器自娱自乐的一个属性，其与element.style可以说是近亲，至少在使用形式上类似，element.currentStyle，差别在于element.currentStyle返回的是元素当前应用的最终CSS属性值（包括外链CSS文件，页面中嵌入的&lt;style/&gt;属性等）。</p>
+</blockquote>
+<p>IE9+<br>window.getComputedStyle(el,null)[attrName]</p>
+<blockquote>
+<p>这个看上去一脸蒙逼见都没见过，getComputedStyle是一个可以获取当前元素所有最终使用的CSS属性值。返回的是一个CSS样式声明对象([object CSSStyleDeclaration])，只读。详细说明请移步张鑫旭大神的空间：<a href="http://www.zhangxinxu.com/wordpress/?p=2378" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/?p=2378</a><br>用法如下</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">"test"</span>),</div><div class="line">    style = <span class="built_in">window</span>.getComputedStyle(dom , <span class="string">":after"</span>);</div></pre></td></tr></table></figure>
+<p>window.getComputedStyle(el,null).getPropertyValue(attrName)</p>
+<blockquote>
+<p>getPropertyValue方法可以获取CSS样式申明对象上的属性值（直接属性名称），例如：<br>window.getComputedStyle(element, null).getPropertyValue(“float”);</p>
+</blockquote>
+<p>//伪类<br>window.getComputedStyle(el,’:after’)[attrName]</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,7 +286,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -216,74 +299,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.hawuji.com/2017/03/14/JavaScript常用API合集02-CSS操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/JavaScript-常用-API-合集01-节点/" class="archive-article-date">
-  	<time datetime="2017-03-14T14:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/JavaScript-常用-API-合集01-节点/">（转载）JavaScript 常用 API 合集01-节点</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">API</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转载</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/14/JavaScript-常用-API-合集01-节点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">（转载）JavaScript 常用 API 合集01-节点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
   
-  
-    </div></section>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript常用API合集02-CSS操作" data-title="（转载）JavaScript常用API合集02-CSS操作" data-url="http://blog.hawuji.com/2017/03/14/JavaScript常用API合集02-CSS操作/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hawuji"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -306,9 +419,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
